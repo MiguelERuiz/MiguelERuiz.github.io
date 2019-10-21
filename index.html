@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/picnic">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Welcome to my profile!</h1>
-        <div>
-            <i class="fas fa-exclamation-triangle"></i>
-            <p> Nowadays, this is under construction, but I do want to share some stuff
-               I like.</p>
-        </div>
-    </body>
-    <footer>
-        This is under no license. Just copy whatever you want
-    </footer>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Elm Google Map</title>
+    <!-- <script src="dist/elm.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>Paack Quiz</h1>
+    <div id="map"></div>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWfHsILmsbc9tQVORMciGHFhOH3CBuplE&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="js/places.js"></script>
+  </body>
 </html>
