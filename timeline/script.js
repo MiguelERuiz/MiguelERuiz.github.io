@@ -1,4 +1,4 @@
-const API_BASE = 'https://your-rails-api.onrender.com'; // Replace with your Render API URL
+const API_BASE = 'https://timeline-rb.onrender.com';
 
 // Try to load token on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,8 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+function eventColor(categoryId) {
+  if (categoryId === 2) {
+    return 'red';
+  }
+  if (categoryId === 3) {
+    return 'yellow';
+  }
+  return '';
+}
+
 function login() {
-  const email = document.getElementById('email').value;
+  const nickname = document.getElementById('nickname').value;
   const password = document.getElementById('password').value;
 
   fetch(`${API_BASE}/login`, {
@@ -18,7 +28,7 @@ function login() {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ nickname, password })
   })
     .then(res => res.json())
     .then(data => {
@@ -41,10 +51,14 @@ function loadTimeline(token) {
   })
     .then(res => res.json())
     .then(events => {
-      const items = events.map(e => ({
-        id: e.id,
-        content: e.title,
-        start: e.date
+      const items = events.map(event => ({
+        id: event.id,
+        content: event.comments || "No comment",
+        start: event.start_date,
+        end: event.end_date,
+        group: event.category_id,
+        title: `Fecha: ${event.start_date}`,
+        className: eventColor(event.category_id)
       }));
 
       const container = document.getElementById('timeline');
