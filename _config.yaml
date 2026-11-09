@@ -1,0 +1,14 @@
+# Site settings
+title: "Miguel Ruiz"
+description: "Software Engineer | Computer Engineer"
+url: "https://migueleruiz.github.io"
+baseurl: ""
+
+theme: chulapa-jekyll
+
+plugins:
+  - jekyll-include-cache
+
+# Theme appearance
+chulapa-skin:
+  skin: flatly
