@@ -16,9 +16,9 @@ chulapa-skin:
 navbar:
   style: classic
   expand: lg
-  brand:
-    title: "Miguel E. Ruiz"
-    url: "/"
+  # brand:
+  #   title: "Miguel E. Ruiz"
+  #   url: "/"
   nav:
   - title: "Home"
     url: "/"
