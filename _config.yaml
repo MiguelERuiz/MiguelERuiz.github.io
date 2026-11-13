@@ -1,5 +1,5 @@
 # Site settings
-title: "Miguel Ruiz"
+title: "Miguel E. Ruiz"
 description: "Software Engineer | Computer Engineer"
 url: "https://migueleruiz.github.io"
 baseurl: ""
@@ -11,4 +11,24 @@ plugins:
 
 # Theme appearance
 chulapa-skin:
-  skin: flatly
+  skin: skeeblu
+
+navbar:
+  style: classic
+  expand: lg
+  brand:
+    title: "Miguel E. Ruiz"
+    url: "/"
+  nav:
+  - title: "Home"
+    url: "/"
+  - title: "Experience"
+    url: "/experience/"
+  - title: "Education"
+    url: "/education/"
+  - title: "Skills"
+    url: "/skills/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Contact"
+    url: "/contact/"
